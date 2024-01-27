@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Count: 6</h3>
+    <h3>Min: 3</h3>
+    <h3>Max: 10</h3>
+    <h2>Output: 5, 4, 3, 9, 6, 7</h2>
+    <script>
+        function generateRandomArray(count_elem, min_val, max_val) {
+    if (min_val > max_val) {
+        var temp = min_val;
+        min_val = max_val;
+        max_val = temp;
+    }
+
+    var randomArray = [];
+    for (var i = 0; i < count_elem; i++) {
+        var randomNumber = Math.floor(Math.random() * (max_val - min_val + 1)) + min_val;
+        randomArray.push(randomNumber);
+    }
+
+    return randomArray;
+}
+
+var count_elem = 6;
+var min_val = 3;
+var max_val = 10;
+var randomArray = generateRandomArray(count_elem, min_val, max_val);
+console.log(randomArray);
+
+    </script>
+    <!-- <script>
+    function power(base, exponent) {
+        return Math.pow(base, exponent);
+    }
+    
+    var baseNumber = 2;
+    var exponentNumber = 3;
+    var result = power(baseNumber, exponentNumber);
+    console.log(result);
+    </script> -->
+</body>
+</html>
